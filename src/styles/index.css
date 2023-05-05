@@ -1,0 +1,149 @@
+body {
+    background: linear-gradient(to bottom right, #f0c3bb,  #aa2254);
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #f39d9d, #ed1291, #28b19a);
+ 
+}
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+    animation: color-change 5s ease-in-out infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: #222;
+    }
+    50% {
+        color: #732653;
+    }
+    100% {
+        color: #222;
+    }
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    animation: border-glow 2s ease-out infinite;
+}
+
+
+
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: #222;
+    animation: border-bounce 0.5s ease-in-out;
+}
+
+
+
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #222;
+    box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.2);
+    animation: shadow-pulse 2s ease-out infinite;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(34, 34, 34, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.2);
+    }
+}
+
+
+
+button {
+
+    background-color: #8f0a7b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+    box-shadow: 0 2px #999;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+button:hover {
+    background-color: #930d0d;
+    color: white;
+    box-shadow: 0 5px #1d0101;
+}
+
+button:active,
+button:focus {
+    background-color: #07873a;
+    box-shadow: 0 2px #2209c1;
+
+   
+}
+
